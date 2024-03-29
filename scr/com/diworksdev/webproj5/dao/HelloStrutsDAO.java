@@ -11,19 +11,21 @@ import com.diworksdev.webproj5.dto.HelloStrutsDTO;
 import com.diworksdev.webproj5.util.DBConnector;
 
 public class HelloStrutsDAO {
-	List<HelloStrutsDTO>helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
+	
+	List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
+	
 	public List<HelloStrutsDTO > select(){
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 		
-		String sql="select * from user";
+		String sql="select * from users";
 		
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
-			ResultSet rs=ps.executeQuery();
+			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()) {
-				HelloStrutsDTO dto=new HelloStrutsDTO();
+				HelloStrutsDTO dto = new HelloStrutsDTO();
 				dto.setUserId(rs.getInt("user_id"));
 				dto.setUserName(rs.getString("user_name"));
 				dto.setPassword(rs.getString("password"));

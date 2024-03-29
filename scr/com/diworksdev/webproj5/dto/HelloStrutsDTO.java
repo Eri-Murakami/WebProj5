@@ -11,15 +11,15 @@ public class HelloStrutsDTO {
 	}
 	
 	public void setUserId(int userId) {
-		this.userId=userId;
+		this.userId = userId;
 	}
 	
-	public String getName() {
+	public String getUserName() {
 		return userName;
 	}
 	
 	public void setUserName(String userName) {
-		this.userName=userName;
+		this.userName = userName;
 	}
 	
 	public String getPassword() {
@@ -27,7 +27,7 @@ public class HelloStrutsDTO {
 	}
 	
 	public void setPassword(String password) {
-		this.password=password;
+		this.password = password;
 	}
 	
 	public String getResult() {
@@ -35,7 +35,7 @@ public class HelloStrutsDTO {
 	}
 	
 	public void setResult(String result) {
-		this.result=result;
+		this.result = result;
 	}
 
 }
